@@ -1,0 +1,526 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+body{
+ font-family: "PT Sans",sans-serif;
+}
+/*header{
+  margin-top: 2%;
+}*/
+.container{
+ width: 80%;
+margin: auto;
+}
+/*header*/
+header .header-content{
+  display: flex; /*للاب*/
+  justify-content: space-between;
+  align-items: center; /*هوسطن*/
+  position: relative;
+}
+.header-content ul{
+list-style: none;
+}
+
+
+.header-content .menu .list a{
+  text-decoration: none;
+  color: #333;
+}
+
+.header-content .menu .list {
+  display: inline-block;
+  color: #333;
+  margin: 10px;
+  padding: 10px 5px;
+  text-decoration: none;
+}
+.header-content .menu .list:after{
+  display: block;
+  content: "";
+  width: 100%;
+  height:4px;
+  background: #7b5244;
+}
+
+
+.header-content .login .icon{
+  margin: 10px;
+}
+.header-content .login .extra{
+  position: relative;
+}
+.header-content .login .extra:after{
+position: absolute;
+content: "0";
+width: 15px;
+height: 15px;
+background: #7b5244;
+color: white;
+bottom: 16px;
+right: 0px;
+font-size: 13px;
+border-radius: 50%;
+padding: 3px;
+}
+
+/*down-drop*/
+.down-drop li a{
+  text-decoration: none;
+  color: #333;
+}
+.drop{
+  position: relative;
+}
+.down-drop{
+  position: absolute;
+  width: 400px;
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border: 2px solid #7b5244;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transition: 0.4s;
+}
+.drop:hover .down-drop{
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.down-drop ul{
+display: table-cell;
+text-align: left;
+}
+.down-drop ul li:first-child a {
+  color: #7b5244;
+  display: inline-block;
+  border-bottom: 1px solid #7b5244;
+  margin-bottom: 10px;
+}
+.down-drop ul li a{
+  color: #757575;
+}
+.down-drop ul li{
+  line-height: 1.7;
+  margin-right: 30px;
+  padding-bottom: 10px;
+}
+/*slider*/
+.slider img{
+width: 100%;
+margin: auto;
+}
+/*category*/
+.header{
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 20px;
+  font-size: 30px;
+}
+.header:after{
+  display: block;
+  content: "";
+  width: 5%;
+  height: 4px;
+  background: #7b5244;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.category-items {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 10px;
+  margin-top: 10px;
+}
+.category-item img{
+  width: 200px;
+}
+.category-item h4{
+color: #757575;
+}
+.category-item span{
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.category-item .icon{
+  background:#7b5244;
+  color: white;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-left: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+.category-item:hover .icon{
+  visibility: visible;
+  opacity: 1;
+}
+@media screen and (max-width:991px){
+  .category-item {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+}
+/*discount*/
+.discount h2,.discount h3,.discount h4{
+  text-transform: capitalize;
+}
+.discount h4{
+  font-weight: normal;
+}
+.discount{
+  /*display: grid;
+  grid-template-columns: auto auto auto auto ;
+  grid-column-gap: 20px;*/
+  margin: 40px;
+
+}
+.discount-disc{
+  /*لو بصينا للشكل هنلاقي ان ال disc واخدمكان 2
+  ف بالتالي عاوزه اكتب دا ان ال disc ياخد 2 وباقي ال disccount كل واحد منهم ياخد 1 مكان  */
+  /*grid-column:1 / 3;*/
+  background: #f7f3ef;
+  padding: 30px;
+  margin-right: 10px;
+  width: 100%;
+}
+.discount-disc .top{
+  padding: 20px 7px 30px 60px;
+  position:relative;
+}
+.discount-disc .icon{
+  color:#7b5244;
+  position: absolute;
+  left: 10px;
+  top: 20px;
+}
+.discount-disc p ,.discount-disc h4{
+  color:#757575;
+}
+.discount-disc p{
+  line-height: 2;
+}
+.discount-item-1{
+background-image: url('../images/cms-banner-1.jpg');
+background-size:cover;
+height: 350px;
+width: 300px;
+position: relative;
+/*transition: 0.2;*/
+margin-right: 20px;
+margin-top: 20px;
+}
+.discount-item-1:hover ,
+.discount-item-2:hover{
+  transform: scale(1.1);
+}
+.discount-item-2{
+background-image: url('../images/cms-banner-2.jpg');
+background-size:cover;
+height: 350px;
+width: 300px;
+position: relative;
+margin-right: 20px;
+margin-top: 20px;
+}
+.info{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.info h3 {
+  color:#7b5244;
+  font-weight: normal;
+}
+.info h2{
+  color:#7b5244;
+  font-size: 25px;
+}
+/*sprites*/
+.sprites{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.sprites-item{
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #7b5244;
+}
+.sprites-item:last-child{
+  border: 0;
+}
+.sprites-info h3{
+  font-size: 20px;
+}
+.sprites-info span{
+  color:#333;
+  font-size: 15px;
+}
+.sprites-info span ,.sprites-info h3{
+  text-transform: capitalize;
+}
+.sprites-icon{
+  background-image: url(../images/service-icon.png);
+  background-repeat: no-repeat;
+  height: 50px;
+}
+.sprites-icon-1{
+background-position: center 5px;
+/*5px بحيث يجبلك اول الصوره*/
+transition: 0.5s;
+}
+.sprites-icon-2{
+background-position: center -180px;
+/*-180
+عشان هتداي تنزلي تحت عشان تجيبي الخلفيه ال عليها الدور وهكدا*/
+transition: 0.5s;
+}
+.sprites-icon-3{
+background-position: center -366px;
+transition: 0.5s;
+}
+.sprites-icon-4{
+background-position: center -549px;
+transition: 0.5s;
+}
+.sprites-icon-5{
+background-position: center -734px;
+transition: 0.5s;
+/*(x y)دا معني الابعادظ*/
+}
+.sprites-item:hover .sprites-icon-1{
+  background-position: center -86px;
+}
+.sprites-item:hover .sprites-icon-2{
+  background-position: center -273px;
+}
+.sprites-item:hover .sprites-icon-3{
+  background-position: center -455px;
+}
+.sprites-item:hover .sprites-icon-4{
+  background-position: center -639px;
+}
+.sprites-item:hover .sprites-icon-5{
+  background-position: center -826px;
+}
+/*product*/
+.product-items{
+display:flex;
+justify-content: center;
+margin-bottom: 50px;
+}
+.product-item{
+ /*flex: 1;*/
+ margin: 0 10px;
+}
+
+.product .list-product{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.product .list-product li{
+  margin: 25px;
+  font-weight: bold;
+  color: #7b5244;
+}
+.product-img{
+position: relative;
+}
+.product-img img{
+  width: 300px;
+}
+.img-overlay{
+  position: absolute;
+  top: 0;
+  transform: scaleX(0);
+  /*تدي الشكل ع محور X بس*/
+  transition: 0.2s;
+
+}
+.img-overlay ul{
+  position: absolute;
+  list-style: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+}
+.img-overlay ul li{
+  margin: 0 10px;
+  background: #7b5244;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+}
+.product-img:hover .img-overlay{
+  transform: scaleX(1);
+}
+.product-info .active{
+color:#ffab00;
+}
+.product-info .lazy{
+  color: #e0e0e0;
+}
+.product-info h4{
+  font-weight: normal;
+  color:#757575;
+  margin: 5px 0;
+}
+@media screen and (max-width:767px){
+.product-item{
+  width: 100%;
+  display: block;
+}
+}
+/*view*/
+.view{
+  overflow: hidden;
+}
+.view-video{
+/*float: left;
+width: 40%;*/
+margin-top: 10px;
+
+}
+.view-disc{
+ /*float: left;
+  width: 60%;*/
+  margin-top: 10px;
+  background: #f7f3ef;
+  padding: 30px;
+  position: relative;
+}
+.view-disc h3{
+  padding: 20px 7px 30px 60px;
+  text-align: center;
+}
+.view-info {
+  position: absolute;
+  top: 40px;
+  color: #7b5244;
+}
+.view-disc p{
+  margin: 20px auto auto 10px;
+  line-height: 1.8;
+  color: #757575;
+}
+.main-image {
+  position: relative;
+}
+.main {
+height: 300px;
+width: 400px;
+}
+.overlay{
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%,-45%);
+}
+@media screen and (max-width:991px){
+  .overlay{
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-30%);
+  }
+  }
+  @media screen and (min-width:991px) and (max-width:1280px){
+    .overlay{
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%,-25%);
+    }
+    }
+/*client*/
+.client{
+margin-top: 3%;
+display: flex;
+justify-content: center;
+}
+.client img{
+  margin-right: 30px;
+
+}
+/*footer*/
+.rocker{
+  margin-top: 3%;
+  display: flex;
+  background: black;
+  background-position: center;
+  background-size: cover;
+}
+.information ,.account,.subscripe{
+flex: 1;
+}
+.information h2 , .account h2 , .subscripe h2{
+color: white;
+font-size: 20px;
+}
+.information ul , .account ul{
+color:#757575;
+}
+.information ul li , .account ul li{
+  margin: 15px 0;
+  text-transform: capitalize;
+}
+.rocker ul {
+  list-style: none;
+}
+.rocker h2 {
+  margin-top: 40px;
+  text-transform: capitalize;
+}
+.title{
+  flex: 2;
+  padding: 30px;
+}
+.title p{
+  color:#757575;
+  line-height: 1.5;
+  margin:30px 10px 30px 10px;
+}
+.subscripe input{
+  color: white;
+  margin-top: 50px;
+  background-color: black;
+  border: 0;
+  padding: 15px ;
+}
+.subscripe .icon i{
+  color: white;
+  margin-right: 10%;
+  margin-top: 30px;
+}
+
+/*media forn nav*/
+/*@media screen and (min-width:991px) {
+.header-content label{
+  display: none;
+  }
+}
+@media screen and (max-width:991px) {
+.header-content .menu{
+  width: 100%;
+  float: none;
+  margin-top: 20px;
+  display: none;
+ }
+.header-content .menu .list {
+   display: block;
+   text-align: center;
+ }
+}
